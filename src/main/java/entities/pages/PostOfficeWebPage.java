@@ -2,26 +2,22 @@ package entities.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
-public class PostOfficePage {
+public class PostOfficeWebPage {
 
-
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name = 'rPTabBar_moreTabBarItem']")
-    public WebElement moreButton;
-
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='trackingItemList_searchBar']")
+    @iOSXCUITFindBy(xpath = "")
     public WebElement searchField;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name = 'Search']")
+    @iOSXCUITFindBy(xpath = "")
     public WebElement searchButton;
 
     @iOSXCUITFindBy(xpath = "")
     public WebElement postInfoIdField;
 
-    public PostOfficePage(AppiumDriver driver){
+    public PostOfficeWebPage(AppiumDriver driver){
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
