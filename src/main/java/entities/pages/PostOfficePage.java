@@ -18,9 +18,9 @@ public class PostOfficePage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name = 'Search']")
     public WebElement searchButton;
 
-    @iOSXCUITFindBy(xpath = "")
+    //@iOSXCUITFindBy(xpath = "")
     public WebElement postInfoIdField;
-
+//
     public PostOfficePage(AppiumDriver driver){
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

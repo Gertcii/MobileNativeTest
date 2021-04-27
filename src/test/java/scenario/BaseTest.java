@@ -39,16 +39,20 @@ public class BaseTest {
 
     @Parameters({ "udid", "platformName", "bundleId"})
     @BeforeTest(alwaysRun = true)
-    public void setUp(String udid, String platformName, String bundleId){
+    public void setUp(String udid, String platformName, String bundleId) throws InterruptedException {
         setUpDriver(udid, platformName, bundleId);
-        postOfficePage = new PostOfficePage(driver);
-        morePage = new MorePage(driver);
-        authorizationPage = new AuthorizationPage(driver);
 
-        postOfficeWebPage = new PostOfficeWebPage(driver);
+        Thread.sleep(10000);
+
+        postOfficePage = new PostOfficePage(driver);
+        //morePage = new MorePage(driver);
+        //authorizationPage = new AuthorizationPage(driver);
+//
+        //postOfficeWebPage = new PostOfficeWebPage(driver);
     }
 
-    @AfterTest
+
+    @AfterTest(alwaysRun = true)
     public void shutDown(){
         System.out.println("The end");
         driver.closeApp();
